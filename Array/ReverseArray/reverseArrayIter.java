@@ -1,10 +1,11 @@
+package ReverseArray;
 import java.io.*; 
 import java.util.*;
 
-public class reverseArray {
+public class reverseArrayIter {
     static Scanner sc;
 
-    reverseArray() {
+    reverseArrayIter() {
         try {  
             sc = new Scanner(new FileReader("input.txt"));
         } catch(Exception e) {
@@ -13,27 +14,27 @@ public class reverseArray {
     }
     
     void solve() {
-        int[] a = new int [5];
-        for (int i = 0; i < a.length; i++)
-            a[i] = sc.nextInt();
+        ArrayList<Integer> arr = new ArrayList<>();
+        while(sc.hasNext()) {
+            arr.add(sc.nextInt());
+        }
 
-        int start = 0, end = a.length - 1;
+        int start = 0, end = arr.size() - 1;
         int t;
 
         while (start < end) {
-            t = a[start];
-            a[start] = a[end];
-            a[end] = t;
+            t = arr.get(start);
+            arr.set(start, arr.get(end));
+            arr.set(end, t);
             start++;
             end--;
         }
 
-        for (int i = 0; i < a.length; i++)
-            System.out.print(a[i] + " ");
+        System.out.print(arr);
     }
 
     public static void main(String[] args) { 
-        new reverseArray().solve();
+        new reverseArrayIter().solve();
     }
 }
 
