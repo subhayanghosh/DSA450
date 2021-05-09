@@ -2,6 +2,11 @@ package ReverseArray;
 import java.io.*; 
 import java.util.*;
 
+/*
+Input => 1 2 3 4 5 6
+Output => 6 5 4 3 2 1
+*/
+
 public class reverseArrayIter {
     static Scanner sc;
 
@@ -38,9 +43,4 @@ public class reverseArrayIter {
     }
 }
 
-/*
-Time Complexity: O(N)
-
-Input set:
-1 2 3 4 5 6
-*/
+// Time Complexity: O(N)
