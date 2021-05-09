@@ -40,8 +40,13 @@ public class maxMin {
         }
 
         else {
-            minmax.max = Math.max(arr.get(0), arr.get(1));
-            minmax.min = Math.min(arr.get(0), arr.get(1));
+            if (arr.get(0) > arr.get(1)) {
+                minmax.max = arr.get(0);
+                minmax.min = arr.get(1);
+            } else {
+                minmax.max = arr.get(1);
+                minmax.min = arr.get(0);;
+            }
             for (int i = 2; i < arr.size(); i++) {
                 if (arr.get(i) > minmax.max)
                     minmax.max = arr.get(i);
