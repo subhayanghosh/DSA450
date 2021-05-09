@@ -65,4 +65,10 @@ public class maxMin {
     }
 }
 
-// Time Complexity: O(N)
+/*
+Time Complexity: O(N)
+
+Total number of comparisons:
+Worst case (when the input set is sorted in descending order) =>  1 + 2(n-2)
+Best case (when the input set is sorted in ascending order) => 1 + n – 2
+*/
